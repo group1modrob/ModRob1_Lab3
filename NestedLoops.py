@@ -6,8 +6,13 @@
 # the inner loop iterates over the columns 
 
 # let's go back to the example of the 2D list
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+grid = [
+    ['A', 'B', 'C'],
+    ['D', 'E', 'F'],
+    ['G', 'H', 'I']
+]
 
-for row in matrix:
-    for element in row:
-        print(element)
+# Iterate over the elements of the grid using nested loops
+for row in grid:
+    for column in row:
+        print(column)
