@@ -1,21 +1,27 @@
-# this section is about tuples
+# This file goes into Tuples. Tuples are like lists, but they are immutable (you can't modify them!) As an example:
+group1 = ("Namrata", "Brayn", "Tai", "Wilfredo")
+print("\nA printed tuple looks like this:")
+print(group1)
 
-robotic_engineers = ("Hannah", "Jim", "Bella", "John")
-print(robotic_engineers)
+# You also access individual elements in them the same way you would do so in lists
+print("\nThe third value in the group1 tuple is:")
+print(group1[2])
 
-# print the 2nd value in the tuple
-print(robotic_engineers[1])
+# You can unpack a tuple and save them as individual elements
+member1, member2, member3, member4 = group1
+print("\nThe members of this group are: ")
+print(member1 + "\n" + member2 + "\n" + member3 + "\n" + member4)
+print("\nAnd the third member of the group is:")
+print(member3)
 
-# unpack the tuple into the variables e1, e2, e3, and e4 that stand for engineers 1 through 4
+# If you try to change anything inside a tuple, you will get an error!
+print("\nTrying to change the first element of the tuple...")
+try:
+    group1[0] = "Madi"
+except:
+    print("\nERROR: Tuples are immutable!")
 
-e1, e2, e3, e4 = robotic_engineers
-print(e1, e2, e3, e4)
-print(e3)
-
-# we cannot change anything inside the tuple
-# robotic_engineers[1] = "Bob"
-
-# we can make a list of tuples
-robotic_partners = [(robotic_engineers[0],robotic_engineers[3]), (robotic_engineers[1], robotic_engineers[2])]
-print(robotic_partners)
-print(robotic_partners[0])
+# If needed, you can make a list of tuples
+groupX = [(group1[3], group1[0]), (group1[2], group1[1])]
+print("\nThe new group is:\n" + str(groupX))
+print("\nAnd their first pair is:\n" + str(groupX[0]))
