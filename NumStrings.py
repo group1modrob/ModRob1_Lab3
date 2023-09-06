@@ -1,11 +1,11 @@
 from math import * 
-
 import math as m
 
+# Defining Values
 num_int = 10 # this is an integer
 num_float = 0.5 # this is a float
 
-# we can do basic arithmitic + - / * ** (for power)
+# Basic Arithmitic (+ = addition; - = subtraction; / = division; * = multiplication; ** = raised to the power of)
 print(num_int * (num_int + num_float))
 
 # % is the modulus operator --> gives the remainder of a division
