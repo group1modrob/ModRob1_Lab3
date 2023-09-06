@@ -1,35 +1,50 @@
-# a dictionary that maps robot arm joints to their corresponding min, max, and default joint angles
-import math as m
+# Now we will use dictionaries to give each of the group members roles and stats in an RPG game
+# Since the original file used the math library, we will also use it here
+# First import the math library
+from math import pi
 
-arm_dict = {
-    "joint1": {
-        "min" : -m.pi/2,
-        "max" : m.pi/2,
-        "default" : 0,
+# Let's define the dictionary (this is actually a set of small dictionaries within a bigger dictionary!)
+
+group1_rpg_roles = {
+    "Namrata": {
+        "class": "Archer",
+        "atk" : 2*pi,
+        "def" : pi,
+        "spd" : 3*pi,
     },
-
-        "joint2": {
-        "min" : -m.pi,
-        "max" : m.pi,
-        "default" : 0,
+    "Brayn": {
+        "class": "Cleric",
+        "atk" : 0,
+        "def" : 4*pi,
+        "spd" : 3*pi,
     },
-
-        "joint3": {
-        "min" : -m.pi/2,
-        "max" : m.pi/2,
-        "default" : 0,
+    "Tai": {
+        "class": "Tank",
+        "atk" : 4*pi,
+        "def" : 3*pi,
+        "spd" : 0,
     },
-
+    "Wilfredo": {
+        "class": "Berserker",
+        "atk" : 4*pi,
+        "def" : 0,
+        "speed" : 3*pi,
+    }
 }
 
+# Specify which group member's stats you'd like to check:
+key = "Brayn" #Modify this as necessary!
 
-# now we can access the keys and values in this dictionary
-joint_angles_1 = arm_dict["joint1"]
-print(joint_angles_1)
+# Now let's access each of the values in the dictionary!
+print("\n" + key + "'s stats are:")
+print(group1_rpg_roles["Brayn"])
 
-# you can also access to individual angles within each joint in the dictionary
-# this gives the max angle of joint 2
-print(arm_dict["joint2"]["max"])
-
-# print the min angle of joint3
-print(arm_dict["joint3"]["min"])
+# Now let's look at Brayn's individual stats
+print("\nBrayn's CLASS is:")
+print(str(group1_rpg_roles["Brayn"]['class']))
+print("\nBrayn's ATTACK is:")
+print(str(group1_rpg_roles["Brayn"]['atk']))
+print("\nBrayn's DEFENSE is:")
+print(str(group1_rpg_roles["Brayn"]['def']))
+print("\nBrayn's SPEED is:")
+print(str(group1_rpg_roles["Brayn"]['spd']))
