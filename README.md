@@ -1,5 +1,5 @@
 # Modern Robotics I, Lab 3: Pre-requisities for Python
-This repository includes all the codes for Lab 3 of the course Modern Robotics I, for the Fall 2023 Semester. 
+This repository includes all the codes for Lab 3 of the course Modern Robotics I, for the Fall 2023 Semester. As per the instructions for this lab report, **all files are inside the folder Prereq_2_Intro_to_Python_Programming**.
 
 **Group Members:**
 - Namrata Roy
