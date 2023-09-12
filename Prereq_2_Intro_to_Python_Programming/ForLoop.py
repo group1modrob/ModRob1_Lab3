@@ -16,7 +16,7 @@ for joint in joint_group:
     print(joint)
 
 # let's do another for loop with the indexes
-# Here, we are using a for loop to iterate through the indices of the robotics_engineers list, and for each index, we are printing both the # index itself and the corresponding element (name of the robotic engineer) from the list.
+# Here, we are using a for loop to iterate through the indices of the joint list, and for each index, we are printing both the # index itself and the corresponding element (name of the robotic engineer) from the list.
 
 for index in range(len(joint_group)):
     print(index)
