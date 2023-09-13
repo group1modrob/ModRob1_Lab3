@@ -1,14 +1,19 @@
-# now we want to create specific types of robots such as a wheeled robot that can inherit from the base Robot class
+# this example is imagining a robotic system that inherits from the original Robot class but
+# with the added changes of now having wheels and more attributes in the __init__ method
 
-# this means that from the Robot.py we import the Robot class
-
+# need to import from the inherited class of Robot.py, since this is the base framework for
+# new WheeledRobot class
 from Robot import Robot
 
 class WheeledRobot(Robot):
-    def __init__ (self, name, DOFs, num_wheels):
-        super().__init__ (name, DOFs) # here we inheretited the name and DOFs from the Robot class
-        self.num_wheels = num_wheels
-    
+    def __init__ (self, name, DOFs, move_type, num_wheels):
+        super().__init__ (name, DOFs) # command for inheriting name and DOFs from the Robot 
+                                      # class so there is no need for redefining attributes
+        self.move_type = move_type # added attribute telling the type of movement
+        
+        self.num_wheels = num_wheels # new addition of wheel number being added to __init__ 
+                                     # that wasn't present in original Robot class
+
     def move(self):
-        print(f"I am a wheeled robot with {self.num_wheels} wheels.")
-        super().move() # here we called the move method from the base class
+        print(f"I am a {self.move_type} robot with {self.num_wheels} wheels.")
+        super().move() # this should print the message from inherited Robot class
